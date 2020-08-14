@@ -142,12 +142,12 @@ export default {
         }
       }
 
-      if (this.user.address.street.length == 0) {
-        isValid = false;
-        this.errors.street = 'Address street is required';
-      } else {
-        this.errors.street = '';
-      }
+      // if (this.user.address.street.length == 0) {
+      //   isValid = false;
+      //   this.errors.street = 'Address street is required';
+      // } else {
+      //   this.errors.street = '';
+      // }
 
       return isValid;
     },
