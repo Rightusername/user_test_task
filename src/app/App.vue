@@ -50,7 +50,7 @@ export default {
 
 .app-root {
   height: 100%;
-  padding: 0 40px;
+  padding: 0 40px; 
   box-sizing: border-box;
   width: 100%;
   overflow: hidden;
