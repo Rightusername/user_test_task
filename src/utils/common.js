@@ -18,5 +18,5 @@ export function generateID() {
       str = str.substr(0, i) + str[i].toUpperCase() + str.substr(i + 1);
     }
   }
-  return str;
+  return str; 
 }
