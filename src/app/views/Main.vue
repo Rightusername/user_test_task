@@ -7,7 +7,10 @@
       <div class="primary-btn" @click="createUser">Create User</div>
     </header>
 
-    <div v-if="!users || users.length == 0" class="no-users">No users</div>
+    <div v-if="!users || users.length == 0" class="no-users">
+      <span v-show="!usersLoaded">Loading...</span>
+      <span v-show="usersLoaded">No users</span>
+    </div>
     <div class="users-list">
       <div v-for="item in users" :key="item.id" class="user">
         <div class="controls">
@@ -49,13 +52,19 @@ export default {
   name: 'Main',
   components: {},
   data() {
-    return {};
+    return {
+      usersLoaded: false,
+    };
   },
   computed: {
     ...mapGetters(['users']),
   },
 
-  created() {},
+  created() {
+    this.$store.dispatch('FETCH_USERS').then(() => {
+      this.usersLoaded = true;
+    });
+  },
 
   beforeDestroy() {},
 

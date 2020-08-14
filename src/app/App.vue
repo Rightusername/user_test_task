@@ -32,9 +32,7 @@ export default {
     this.$store.dispatch('LOAD_STATE');
   },
 
-  mounted() {
-    this.$store.dispatch('FETCH_USERS')
-  },
+  mounted() {},
 
   methods: {},
 };
