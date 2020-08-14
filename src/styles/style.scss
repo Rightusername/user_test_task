@@ -1,0 +1,68 @@
+/* DO NOT include to content-scripts */
+
+
+// @import './hamburgers/hamburgers.scss';
+// @import './fonts/didactgothic.scss';
+@import './grid.scss';
+@import './media.scss';
+@import './_mixins.scss';
+@import './_typography.scss';
+@import './elems.scss';
+@import './_animations.scss';
+@import './components/modals.scss';
+@import './themes/dark.scss';
+@import './themes/light.scss';
+
+
+$width: 1400px;
+$section-width: 650px;
+
+ 
+@mixin maxwidth() {
+  max-width: $width;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 480px) {
+    padding: 0 15px;
+  }
+}
+
+
+body {
+  margin: 0;
+}
+
+
+ul, ol{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+svg{
+  outline: none;
+}
+
+textarea {
+  font-family: 'Didact Gothic';
+}
+
+* {
+  color: var(--primary-text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  outline: none;
+  padding: 0px;
+}
+
+
+
+
